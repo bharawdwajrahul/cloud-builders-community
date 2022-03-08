@@ -8,7 +8,7 @@
 #
 
 FROM debian:stretch
-MAINTAINER Chinmay Garde <chinmaygarde@google.com>
+MAINTAINER Rahul V Bharadwaj <bharadwajrahul17@google.com>
 
 # Install Dependencies.
 RUN apt update -y
