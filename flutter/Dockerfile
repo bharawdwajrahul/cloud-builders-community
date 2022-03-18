@@ -59,6 +59,6 @@ ARG channel=stable
 RUN flutter channel $channel
 
 # Perform a flutter upgrade
-RUN flutter upgrade
+#RUN flutter upgrade
 
 ENTRYPOINT [ "flutter" ]
