@@ -38,7 +38,7 @@ ENV PATH="${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin:${PATH}"
 
 # Install Flutter.
 ENV FLUTTER_ROOT="/opt/flutter"
-RUN git clone https://github.com/flutter/flutter "${FLUTTER_ROOT}"
+RUN git clone https://github.com/bharawdwajrahul/flutter "${FLUTTER_ROOT}"
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 ENV ANDROID_HOME="${ANDROID_TOOLS_ROOT}"
 
