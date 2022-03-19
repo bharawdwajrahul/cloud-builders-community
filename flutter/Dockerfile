@@ -23,7 +23,7 @@ RUN apt install -y \
   
 
 # Install the Android SDK Dependency.
-ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"
+ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip"
 ENV ANDROID_TOOLS_ROOT="/opt/android_sdk"
 RUN mkdir -p "${ANDROID_TOOLS_ROOT}/cmdline-tools"
 ENV ANDROID_SDK_ARCHIVE="${ANDROID_TOOLS_ROOT}/archive"
