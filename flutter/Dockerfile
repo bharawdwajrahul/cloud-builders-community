@@ -29,8 +29,8 @@ ENV ANDROID_SDK_ARCHIVE="${ANDROID_TOOLS_ROOT}/archive"
 RUN wget -q "${ANDROID_SDK_URL}" -O "${ANDROID_SDK_ARCHIVE}"
 RUN unzip -q -d "${ANDROID_TOOLS_ROOT}/cmdline-tools" "${ANDROID_SDK_ARCHIVE}"
 RUN mv "${ANDROID_TOOLS_ROOT}/cmdline-tools/cmdline-tools" "${ANDROID_TOOLS_ROOT}/cmdline-tools/latest"
-RUN yes "y" | "${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin/sdkmanager" "build-tools;30.0.3"
-RUN yes "y" | "${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin/sdkmanager" "platforms;android-31"
+RUN yes "y" | "${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin/sdkmanager" "build-tools;30.0.2"
+RUN yes "y" | "${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin/sdkmanager" "platforms;android-30"
 RUN yes "y" | "${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin/sdkmanager" "platform-tools"
 RUN rm "${ANDROID_SDK_ARCHIVE}"
 ENV PATH="${ANDROID_TOOLS_ROOT}/cmdline-tools/latest:${PATH}"
@@ -38,7 +38,7 @@ ENV PATH="${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin:${PATH}"
 
 # Install Flutter.
 ENV FLUTTER_ROOT="/opt/flutter"
-RUN git clone https://github.com/bharawdwajrahul/flutter "${FLUTTER_ROOT}"
+RUN git clone https://github.com/flutter/flutter "${FLUTTER_ROOT}"
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 ENV ANDROID_HOME="${ANDROID_TOOLS_ROOT}"
 
@@ -59,6 +59,6 @@ ARG channel=stable
 RUN flutter channel $channel
 
 # Perform a flutter upgrade
-#RUN flutter upgrade
+RUN flutter upgrade
 
 ENTRYPOINT [ "flutter" ]
