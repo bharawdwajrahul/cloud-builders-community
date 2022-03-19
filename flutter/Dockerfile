@@ -19,7 +19,7 @@ RUN apt install -y \
   unzip \
   lib32stdc++6 \
   libglu1-mesa \
-  default-jdk-headless
+  11-jdk-headless
 
 # Install the Android SDK Dependency.
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"
