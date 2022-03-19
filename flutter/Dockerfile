@@ -7,7 +7,7 @@
 # To build iOS applications, a Mac development environment is necessary.
 #
 
-FROM debian:stretch
+FROM debian:bullseye
 MAINTAINER Rahul V Bharadwaj <bharadwajrahul17@google.com>
 
 # Install Dependencies.
@@ -18,9 +18,9 @@ RUN apt install -y \
   curl \
   unzip \
   lib32stdc++6 \
-  libglu1-mesa
+  libglu1-mesa \
+  default-jdk
   
-RUN sudo apt install openjdk-11-jre-headless
 
 # Install the Android SDK Dependency.
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"
