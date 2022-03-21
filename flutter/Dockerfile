@@ -23,7 +23,7 @@ RUN apt install -y \
   
 
 # Install the Android SDK Dependency.
-ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip"
+ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"
 ENV ANDROID_TOOLS_ROOT="/opt/android_sdk"
 RUN mkdir -p "${ANDROID_TOOLS_ROOT}/cmdline-tools"
 ENV ANDROID_SDK_ARCHIVE="${ANDROID_TOOLS_ROOT}/archive"
@@ -39,7 +39,7 @@ ENV PATH="${ANDROID_TOOLS_ROOT}/cmdline-tools/latest/bin:${PATH}"
 
 # Install Flutter.
 ENV FLUTTER_ROOT="/opt/flutter"
-RUN git clone https://github.com/flutter/flutter.git -b stable "${FLUTTER_ROOT}"
+RUN git clone https://RahulVBharadwaj@bitbucket.org/rahulvbharadwaj/flutter2.10.3_linux.git -b stable "${FLUTTER_ROOT}"
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 ENV ANDROID_HOME="${ANDROID_TOOLS_ROOT}"
 
