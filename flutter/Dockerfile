@@ -56,7 +56,7 @@ RUN yes "y" | flutter doctor --android-licenses
 RUN flutter doctor -v
 
 # Switch to the correct channel
-ARG channel=stable
+ARG channel=master
 RUN flutter channel $channel
 
 # Perform a flutter upgrade
