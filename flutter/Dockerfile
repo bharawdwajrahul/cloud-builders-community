@@ -7,7 +7,8 @@
 # To build iOS applications, a Mac development environment is necessary.
 #
 
-FROM debian:bullseye
+#FROM debian:bullseye
+FROM ubuntu:18.04
 MAINTAINER Rahul V Bharadwaj <bharadwajrahul17@google.com>
 
 # Install Dependencies.
