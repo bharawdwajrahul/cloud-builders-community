@@ -1,5 +1,4 @@
-ARG PY_VERSION=3.7
-FROM python:${PY_VERSION}-alpine
+FROM python:3.7-bullseye
 
 RUN pip install ocpp
 
