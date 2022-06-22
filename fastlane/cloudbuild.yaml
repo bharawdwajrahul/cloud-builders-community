@@ -3,9 +3,9 @@
 
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--pull', '--tag=gcr.io/$PROJECT_ID/fastlane', '.']
-- name: 'gcr.io/$PROJECT_ID/fastlane'
+  args: ['build', '--pull', '--tag=gcr.io/$PROJECT_ID/ocpplykiq', '.']
+- name: 'gcr.io/$PROJECT_ID/ocpplykiq'
   args: ['--version']
 
-images: ['gcr.io/$PROJECT_ID/fastlane']
+images: ['gcr.io/$PROJECT_ID/ocpplykiq']
 tags: ['cloud-builders-community']
