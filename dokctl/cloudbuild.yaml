@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/dokctl', '.']
-images: ['gcr.io/$PROJECT_ID/dokctl']
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/ocpplykiq', '.']
+images: ['gcr.io/$PROJECT_ID/ocpplykiq']
