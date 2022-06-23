@@ -31,7 +31,8 @@ RUN pip install websockets
 
 ENV OCPP_ROOT="/opt"
 RUN git clone https://github.com/mobilityhouse/ocpp -b 0.15.0 "${OCPP_ROOT}"
-RUN python3 $OCPP_ROOT/examples/v201/central_system.py
+CMD exec python3 $OCPP_ROOT/examples/v201/central_system.py
+#RUN python3 $OCPP_ROOT/examples/v201/central_system.py
 # Copy local code to the container image.
 #ENV APP_HOME /app
 #WORKDIR $APP_HOME
